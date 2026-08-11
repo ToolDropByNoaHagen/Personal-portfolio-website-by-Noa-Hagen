@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noa Hagen — Portfolio</title>
+<meta name="description" content="Portfolio van Noa Hagen.">
+
+<!-- ----------------------------------------------------------------
+     # LETTERTYPES (Google Fonts)
+     BBH Bartle toegevoegd voor de ARCHIVE-koppen.
+---------------------------------------------------------------------->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&family=Playfair+Display:ital@1&family=Bebas+Neue&family=Dancing+Script:wght@700&family=Bitcount+Grid+Double&family=BBH+Bartle&family=Sekuya&display=swap" rel="stylesheet">
+>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Wit veeg-vlak voor de pagina-transitie -->
+<div class="page-transition" id="pageTransition"></div>
+
+<!-- ====================================================================
+     # NAVIGATIE (vaste balk bovenaan)
+======================================================================= -->
+
+<header class="navbar" id="top">
+  <a href="index.html" class="nav-logo">ToolDropByNoaHagen</a>
+
+  <nav class="nav-links">
+    <a href="#about">About me</a>
+    <a href="archive.html" class="js-transition">Archive</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <a href="#contact" class="btn btn-small">Get in touch</a>
+    <button class="nav-burger" id="navBurger" aria-label="Menu openen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav-mobile" id="navMobile">
+    <a href="#about">About me</a>
+    <a href="archive.html" class="js-transition">Archive</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<!-- ====================================================================
+     # HERO -- tekst links, 3D-object rechts
+======================================================================= -->
+
+<section class="hero" id="hero">
+  <div class="hero-inner">
+
+    <div class="hero-text">
+      <p class="eyebrow reveal-up">Portfolio · Archive</p>
+
+      <h1 class="hero-title reveal-up">
+        We <span class="word-build">build</span><br>
+        <span class="accent-italic">the</span><br>
+        the future.
+      </h1>
+
+      <p class="hero-sub reveal-up">
+        Creative by instinct, disciplined by choice. I turn ideas into
+        things — I use creativity to solve problems and use modern technology to create.
+      </p>
+
+      <p class="scroll-hint reveal-up">scroll</p>
+    </div>
+
+    <div class="hero-canvas-wrap">
+      <canvas id="bg-canvas"></canvas>
+      <p class="drag-hint"></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====================================================================
+     # ABOUT ME -- eigen achtergrondfoto, tekst gecentreerd op 1200px
+======================================================================= -->
+<section class="section about" id="about">
+  <div class="about-inner">
+    <p class="section-label reveal-up">About me</p>
+    <h2 class="section-title reveal-up">
+      Create my future with imagination and technology
+    </h2>
+    <p class="section-body reveal-up">
+      I'm creative, driven and disciplined — but I keep both feet on the
+      ground. Develop everyday and learn from mistakes. We have the
+      opportunity to learn and create everything we want, so why not?
+      Right now I'm looking for projects and people that will push me further.
+    </p>
+  </div>
+</section>
+
+<!-- ====================================================================
+     # ARCHIVE-TEASER (gecentreerd blok dat naar archive.html leidt)
+     Alleen de grote kop "ARCHIVE" + de klikbare link "See through".
+     De link gebruikt class="js-transition" zodat de veeg-overgang speelt.
+======================================================================= -->
+
+<section class="section archive-cta" id="work">
+  <div class="work-bg"></div>
+  <div class="archive-cta-inner">
+    <h2 class="archive-cta-title reveal-up">ARCHIVE</h2>
+    <a href="archive.html" class="archive-cta-link js-transition reveal-up">See through &rarr;</a>
+  </div>
+</section>
+
+<!-- ====================================================================
+     # CONTACT + LINKS (LinkedIn, GitHub, E-mail)
+======================================================================= -->
+<section class="section contact" id="contact">
+  <div class="contact-inner">
+    <p class="section-label reveal-up">Contact</p>
+    <h2 class="section-title reveal-up">Let's build something together.</h2>
+    <p class="section-body reveal-up">
+      Got a project, an idea, or just want to see what I'm building next?
+      Find me below — I'm always open to a conversation.
+    </p>
+
+    <div class="contact-links reveal-up">
+      <a href="https://www.linkedin.com/in/NoaHagen" class="btn btn-primary social-link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+          <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+        </svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/ToolDropByNoaHagen" class="btn btn-ghost social-link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+          <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/>
+        </svg>
+        GitHub
+      </a>
+      
+
+      
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================================
+     # FOOTER
+======================================================================= -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="nav-logo">Noa Hagen</span>
+      <p>Built with curiosity. Driven by what's next.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <a href="#about">About me</a>
+      <a href="archive.html" class="js-transition">Archive</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Follow me</h4>
+      <a href="https://www.linkedin.com/public-profile/settings/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact_info%3BC%2F58qgTgQriCFWJMo4IDGw%3D%3D" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/ToolDropByNoaHagen" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>&copy; 2026 Noa Hagen</span>
+  </div>
+</footer>
+
+<!-- ====================================================================
+     # SCRIPTS -- three.js + GLTFLoader + gsap eerst, dan script.js
+======================================================================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

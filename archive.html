@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archive — Noa Hagen</title>
+<meta name="description" content="Archive: een catalogus van projecten van Noa Hagen.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&family=Playfair+Display:ital@1&family=Bebas+Neue&family=Dancing+Script:wght@700&family=Bitcount+Grid+Double&family=BBH+Bartle&family=Sekuya&display=swap" rel="stylesheet">
+>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="archive.css">
+</head>
+<body>
+
+<!-- Transitie-vlak -->
+<div class="page-transition" id="pageTransition"></div>
+<!-- Levende achtergrond -->
+<div class="archive-page-bg"></div>
+
+<!-- ====================================================================
+     # NAVIGATIE
+======================================================================= -->
+<header class="navbar" id="top">
+  <a href="index.html" class="nav-logo">ToolDropByNoaHagen</a>
+  <nav class="nav-links">
+    <a href="index.html#about">About me</a>
+    <a href="archive.html" class="js-transition">Archive</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <div class="nav-actions">
+    <a href="index.html" class="btn btn-small">&larr; Terug</a>
+  </div>
+</header>
+
+<!-- ====================================================================
+     # ARCHIVE-KOP
+======================================================================= -->
+<section class="archive-hero">
+  <h1 class="archive-title">ARCHIVE</h1>
+  <p class="archive-intro">
+    <!-- PLAATSHOUDER: korte introzin -->
+    Where every build has its own story
+  </p>
+</section>
+
+<!-- ====================================================================
+     # HORIZONTALE GALERIJ (boeken)
+     Klik op een boek -> foto slidet naar links, uitleg fadet rechts in.
+
+     PER PROJECT INVULLEN in het JSON-blok in elk boek:
+       "title"    = kop in het detail
+       "body"     = uitgebreide uitleg
+       "link"     = website-URL  (LEEG "" = geen knop)
+       "linkText" = tekst op de knop
+======================================================================= -->
+<div class="archive-viewport" id="archiveViewport">
+  <section class="archive-grid" id="archiveGrid">
+
+    <!-- PROJECT 1 -->
+    <a class="archive-item" href="#" data-name="ToolDropByNoaHagen">
+      <div class="archive-thumb"><img src="Assets/project1-cover.svg" alt="ToolDropByNoaHagen"></div>
+      <div class="archive-meta"><h2>ToolDropByNoaHagen</h2></div>
+      <script type="application/json" class="archive-detail">
+        {
+          "title": "ToolDropByNoaHagen",
+          "body": "A self-built portfolio site, designed and coded entirely by me — from the first sketch to the final line. It brings together the things I make in one place, built with HTML, CSS and JavaScript. Every part, from layout to animation, is my own work. Consider it the first page of something still being written.",
+          "link": "https://tooldropbynoahagen.com",
+          "linkText": "Visit"
+        }
+      </script>
+    </a>
+
+    <!-- VERBORGEN: PROJECT 2 verwijder deze regel en "einde verborgen" onderaan om ze weer te tonen
+    <a class="archive-item" href="#" data-name="Project two">
+      <div class="archive-thumb"></div>
+      <div class="archive-meta"><h2>Project two</h2></div>
+      <script type="application/json" class="archive-detail">
+        { "title": "Project two", "body": "Uitleg over project twee.", "link": "", "linkText": "" }
+      </script>
+    </a> einde verborgen -->
+
+    <!-- VERBORGEN: PROJECT 3 verwijder deze regel en "einde verborgen" onderaan om ze weer te tonen
+    <a class="archive-item" href="#" data-name="Project three">
+      <div class="archive-thumb"></div>
+      <div class="archive-meta"><h2>Project three</h2></div>
+      <script type="application/json" class="archive-detail">
+        { "title": "Project three", "body": "Uitleg over project drie.", "link": "", "linkText": "" }
+      </script>
+    </a> einde verborgen -->
+
+  </section>
+</div>
+
+<!-- ====================================================================
+     # DETAIL-OVERLAY -- foto links, uitleg rechts
+     Verschijnt over de galerij bij een klik. JS vult de inhoud.
+======================================================================= -->
+<div class="detail-overlay" id="detailOverlay" aria-hidden="true">
+  <button class="detail-close" id="detailClose" aria-label="Sluiten">&times;</button>
+  <div class="detail-stage">
+    <!-- Links: de omslagfoto die naar zijn plek slidet -->
+    <div class="detail-cover" id="detailCover"></div>
+    <!-- Rechts: uitleg + link, fadet in -->
+    <div class="detail-info">
+      <p class="detail-tag">Project</p>
+      <h2 class="detail-title" id="detailTitle"></h2>
+      <p class="detail-body" id="detailBody"></p>
+      <a class="btn btn-primary detail-link" id="detailLink" href="#" target="_blank" rel="noopener"></a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="archive.js"></script>
+</body>
+</html>
