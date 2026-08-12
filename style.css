@@ -134,7 +134,7 @@ img { max-width: 100%; display: block; }
 
 .nav-mobile {
   display: none; position: fixed; top: 66px; left: 0; right: 0;
-  background: var(--color-bg-soft); border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg); border-bottom: 1px solid var(--color-border);
   flex-direction: column; padding: 20px 32px; gap: 16px; z-index: 99;
 }
 .nav-mobile.is-open { display: flex; }
